@@ -30,7 +30,7 @@ class LidarSensor:
     def sense_walls(self):
         data = []
         x1, y1 = self.position[0], self.position[1]
-        for theta in np.linspace(0, 2 * math.pi, 60, False):
+        for theta in np.linspace(0, 2 * math.pi, 200, False):
             x2, y2 = (x1 + self.range * math.cos(theta), y1 - self.range * math.sin(theta))
             for i in range(0, 100):
                 u = i / 100
